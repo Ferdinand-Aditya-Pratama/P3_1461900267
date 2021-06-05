@@ -21,4 +21,4 @@ Route::get('/', function () {
 route::resource('toko', TokoController::class);
 route::resource('tambah_transaksi0267', TokoController::class);
 route::resource('edit_transaksi0267', TokoController::class);
-route::resource('edit_transaksi0267', TokoController::class);
+route::resource('/cari', TokoController::class);

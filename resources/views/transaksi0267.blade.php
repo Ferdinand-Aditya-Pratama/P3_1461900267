@@ -28,7 +28,7 @@
     <div style="overflow-x:auto">
 
         
-         <p>Cari Data Pegawai :</p>
+         <p>Cari Data :</p>
 	    <form action="/cari" method="GET">
 		    <input type="text" name="cari" placeholder="Cari Data ..">
 		    <input type="submit" value="CARI">
