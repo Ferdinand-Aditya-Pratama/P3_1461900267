@@ -9,5 +9,13 @@ class Toko extends Model
 {
     use HasFactory;
 
+    public $timestamps = false;
+
     protected $table = 'transaksi';
+
+    protected $fillable = [
+        'id',
+        'id_pelanggan',
+        'id_barang',
+    ];
 }

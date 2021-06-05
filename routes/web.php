@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TokoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+route::resource('toko', TokoController::class);
+route::resource('tambah_transaksi0267', TokoController::class);
+route::resource('edit_transaksi0267', TokoController::class);
