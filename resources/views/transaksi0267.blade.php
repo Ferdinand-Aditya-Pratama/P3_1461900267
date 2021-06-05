@@ -26,7 +26,13 @@
 
 <body>
     <div style="overflow-x:auto">
+
         
+         <p>Cari Data Pegawai :</p>
+	    <form action="/cari" method="GET">
+		    <input type="text" name="cari" placeholder="Cari Data ..">
+		    <input type="submit" value="CARI">
+	    </form>
         <a class="tambah" href="{{route('tambah_transaksi0267.create')}}">Tambah Data </a>
         <table>
             <thead>

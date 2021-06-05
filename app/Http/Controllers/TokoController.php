@@ -18,6 +18,7 @@ class TokoController extends Controller
         ->join('barang', 'transaksi.id_barang', 'barang.id')
         ->select('transaksi.id', 'pelanggan.nama', 'pelanggan.alamat', 'barang.harga')
         ->get();
+    
         return view('transaksi0267', ['toko' => $toko]);
     }
 
@@ -88,6 +89,20 @@ class TokoController extends Controller
 
         return redirect('toko');
     }
+
+    public function cari(Request $request)
+	{
+		$cari = $request->cari;
+ 
+		$toko1 = Toko::join('pelanggan', 'transaksi.id_pelanggan', 'pelanggan.id' )
+        ->join('barang', 'transaksi.id_barang', 'barang.id')
+        ->select('transaksi.id', 'pelanggan.nama', 'pelanggan.alamat', 'barang.harga')
+		->where('nama','like',"%".$cari."%")
+		->get();
+ 
+		return view('transaksi0267',['toko1' => $toko1]);
+ 
+	}
 
     /**
      * Remove the specified resource from storage.
